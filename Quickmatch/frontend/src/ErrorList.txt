@@ -1,0 +1,42 @@
+Club.vue:
+  - CANNOT_GET_PLAYER_CLUBS: erreur de réception des clubs dont l'user fait parti
+  - CANNOT_GET_OTHER_CLUBS: erreur de réception des autres clubs (dont l'user ne fait pas parti)
+  - CLUB_NAME_ALREADY_EXIST: impossible de créer un club avec un nom existant
+  - CANNOT_CREATE_CLUB: erreur de création du club dans la base de données
+  - CANNOT_INSERT_ADMIN_IN_CLUB: échec de l'ajout du premier joueur (admin) dans un club
+  - CANNOT_INSERT_PLAYER_IN_CLUB: échec de l'ajout d'un joueur à un club
+  - CANNOT_DELETE_PLAYER_IN_CLUB: impossible d'enlever un joueur à un club
+  - CANNOT_DELETE_CLUB: impossible de supprimer un club
+  - CANNOT_GET_NUMBER_ADMIN_CLUB: erreur de réception du nombre d'admin(s) d'un club
+  - CANNOT_PROMOTE_PLAYER_ADMIN: impossible de passer un user admin
+  - CANNOT_KICK_PLAYER_FROM_CLUB: impossible de supprimer un joueur en étant admin
+  - CANNOT_INSERT_PLAYER_IN_CLUB_BY_USER: échec de l'ajout d'un joueur à un club par l'admin
+  - CANNOT_GET_PLAYER_LIST_IN_CLUB: erreur de réception de la liste des joueurs d'un club
+  - CANNOT_GET_PLAYER_LIST_NOT_IN_CLUB: erreur de réception de la liste des joueurs n'appartenant pas à un club
+
+CreateAccount.vue:
+ - CREATION_ACCOUNT_EMAIL_NONE: impossible de créer un compte sans l'adresse mail stockée (dans le store)
+ - CREATION_GOOGLE_ACCOUNT_ERROR: création de compte via google impossible
+ - CANNOT_UPDATE_VALID_FIELD: impossible de set le champ "is_valid" d'un compte
+
+EditProfile.vue:
+  - CANNOT_UPDATE_PROFILE: erreur lors du post de la mis à jour d'un profil
+
+Login.vue:
+  - CANNOT_CHECK_USER_MAIL: erreur de réception de l'existence d'un mail dans la base de donnée
+
+Profile.vue:
+  - CANNOT_UPDATE_USER_PROFILE_PICTURE: impossible de modifier l'avatar d'un user dans la base de donnée
+
+Signin.vue:
+  - CANNOT_CHECK_USER_MAIL: erreur de réception de l'existence d'un mail dans la base de donnée
+  - CANNOT_CREATE_ACCOUNT_WITHOUT_GOOGLE: création d'un compte quickmatch impossible
+  - CANNOT_UPDATE_PASSWORD: impossible de modifier le mot de passe d'un user (salage raté)
+
+Stat.vue:
+ - CANNOT_GET_PLAYER_STAT: erreur de réception des stats d'un joueur
+ - CANNOT_GET_PLAYER_INFOS: erreur de réception des informations d'un joueur
+
+VerifyAccount.vue:
+  - CANNOT_UPDATE_VALID_FIELD: impossible de set le champ "is_valid" d'un compte
+  - WRONG_CODE: mauvais code rentré par l'user pour valider son compte

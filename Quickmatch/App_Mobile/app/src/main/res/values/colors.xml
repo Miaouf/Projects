@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#17A072</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="grey">#56272424</color>
+    <color name="green_match">#DFFFAF</color>
+    <color name="red_match">#FBCEB1</color>
+    <color name="accepted_invitation">#16B84E</color>
+    <color name="declined_invitation">#ED0000</color>
+</resources>

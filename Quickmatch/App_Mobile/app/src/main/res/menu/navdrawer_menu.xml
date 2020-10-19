@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/invitationFragmentUI"
+        android:icon="@drawable/ic_invitations"
+        android:title="@string/invitations_text"/>
+    <item
+        android:id="@+id/matchFragmentUI"
+        android:icon="@drawable/ic_match"
+        android:title="@string/matches_string" />
+    <item
+        android:id="@+id/statFragmentUI"
+        android:icon="@drawable/ic_stat"
+        android:title="@string/stats_string" />
+    <item
+        android:id="@+id/clubFragmentUI"
+        android:icon="@drawable/ic_club"
+        android:title="@string/club_string" />
+    <item
+        android:id="@+id/agendaFragmentUI"
+        android:icon="@drawable/ic_agenda"
+        android:title="@string/agenda_string" />
+    <item
+        android:id="@+id/profileFragmentUI"
+        android:icon="@drawable/ic_person_black_24dp"
+        android:title="@string/profile_text" />
+</menu>

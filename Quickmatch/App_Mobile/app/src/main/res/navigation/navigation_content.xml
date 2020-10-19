@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_content"
+    app:startDestination="@+id/homeFragmentUI">
+
+    <fragment
+        android:id="@+id/homeFragmentUI"
+        android:name="com.example.quickmatch.content.home.HomeFragmentUI"
+        android:label="fragment_home" />
+    <fragment
+        android:id="@+id/agendaFragmentUI"
+        android:name="com.example.quickmatch.content.agenda.AgendaFragmentUI"
+        android:label="fragment_agenda"
+        tools:layout="@layout/fragment_agenda" />
+    <fragment
+        android:id="@+id/profileFragmentUI"
+        android:name="com.example.quickmatch.content.profile.ProfileFragmentUI"
+        android:label="fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragmentUI_to_profileEditFragmentUI"
+            app:destination="@id/profileEditFragmentUI"
+            app:popUpTo="@+id/profileFragmentUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchFragmentUI"
+        android:name="com.example.quickmatch.content.match.MatchFragmentUI"
+        android:label="fragment_matchs"
+        tools:layout="@layout/fragment_matchs" >
+        <action
+            android:id="@+id/action_matchFragmentUI_to_matchCreationFragmentUI"
+            app:destination="@id/matchCreationFragmentUI"
+            app:popUpTo="@+id/matchFragmentUI" />
+        <action
+            android:id="@+id/action_matchFragmentUI_to_matchPlayFragmentUI"
+            app:destination="@id/matchPlayFragmentUI"
+            app:popUpTo="@+id/matchFragmentUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/statFragmentUI"
+        android:name="com.example.quickmatch.content.stat.StatFragmentUI"
+        android:label="fragment_stats"
+        tools:layout="@layout/fragment_stats" />
+    <fragment
+        android:id="@+id/clubFragmentUI"
+        android:name="com.example.quickmatch.content.club.ClubFragmentUI"
+        android:label="fragment_club"
+        tools:layout="@layout/fragment_club" >
+        <action
+            android:id="@+id/action_clubFragmentUI_to_clubListFragmentUI"
+            app:destination="@id/clubListFragmentUI" />
+        <action
+            android:id="@+id/action_clubFragmentUI_to_clubCreationFragmentUI"
+            app:destination="@id/clubCreationFragmentUI" />
+        <action
+            android:id="@+id/action_clubFragmentUI_to_clubIntefaceFragment"
+            app:destination="@id/clubIntefaceFragment"
+            app:popUpTo="@+id/clubFragmentUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragmentUI"
+        android:name="com.example.quickmatch.content.setting.SettingFragmentUI"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/profileEditFragmentUI"
+        android:name="com.example.quickmatch.content.profile.ProfileEditFragmentUI"
+        android:label="ProfileEditFragmentUI" >
+        <action
+            android:id="@+id/action_profileEditFragmentUI_to_profileFragmentUI"
+            app:destination="@id/profileFragmentUI"
+            app:popUpTo="@+id/profileFragmentUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/clubListFragmentUI"
+        android:name="com.example.quickmatch.content.club.ClubJoinFragmentUI"
+        android:label="ClubListFragmentUI" />
+    <fragment
+        android:id="@+id/clubCreationFragmentUI"
+        android:name="com.example.quickmatch.content.club.ClubCreationFragmentUI"
+        android:label="ClubCreationFragmentUI" >
+        <action
+            android:id="@+id/action_clubCreationFragmentUI_to_clubFragmentUI"
+            app:destination="@id/clubFragmentUI"
+            app:popUpTo="@+id/clubFragmentUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/clubIntefaceFragment"
+        android:name="com.example.quickmatch.content.club.ClubInterfaceFragment"
+        android:label="ClubIntefaceFragment" >
+        <action
+            android:id="@+id/action_clubIntefaceFragment_to_clubFragmentUI"
+            app:destination="@id/clubFragmentUI"
+            app:popUpTo="@+id/homeFragmentUI" />
+        <argument
+            android:name="clubId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchCreationFragmentUI"
+        android:name="com.example.quickmatch.content.match.MatchCreationFragmentUI"
+        android:label="MatchCreationFragmentUI" >
+        <action
+            android:id="@+id/action_matchCreationFragmentUI_to_matchFragmentUI"
+            app:destination="@id/matchFragmentUI"
+            app:popUpTo="@+id/matchFragmentUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/invitationFragmentUI"
+        android:name="com.example.quickmatch.content.invitation.InvitationFragmentUI"
+        android:label="InvitationFragmentUI" />
+    <fragment
+        android:id="@+id/matchUpcomingFragment"
+        android:name="com.example.quickmatch.content.match.MatchUpcomingFragment"
+        android:label="MatchUpcomingFragment" />
+    <fragment
+        android:id="@+id/matchPlayFragmentUI"
+        android:name="com.example.quickmatch.content.match.MatchPlayFragmentUI"
+        android:label="MatchPlayFragmentUI" >
+        <argument
+            android:name="matchId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_matchPlayFragmentUI_to_matchMeetsheetFragmentUI"
+            app:destination="@id/matchMeetsheetFragmentUI"
+            app:popUpTo="@+id/matchPlayFragmentUI" />
+    </fragment>
+    <fragment
+        android:id="@+id/matchMeetsheetFragmentUI"
+        android:name="com.example.quickmatch.content.match.MatchMeetsheetFragmentUI"
+        android:label="MatchMeetsheetFragmentUI" >
+        <argument
+            android:name="matchId"
+            app:argType="integer" />
+    </fragment>
+</navigation>

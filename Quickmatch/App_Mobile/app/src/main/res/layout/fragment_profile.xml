@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.quickmatch.content.profile.ProfileFragmentViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/profile_avatar_image"
+            imageUrl="@{viewModel.playerObject.avatar}"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="32dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars"
+            tools:visibility="visible" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/edit_mode_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_edit_white_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/name_pseudo_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profile_avatar_image"
+            tools:text="Name Firstname (Pseudo)"
+            playerNamePseudoFormatted="@{viewModel.playerObject}"/>
+
+        <TextView
+            android:id="@+id/bio_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name_pseudo_text"
+            tools:text="My bio..."
+            playerBioFormatted="@{viewModel.playerObject}" />
+
+        <TextView
+            android:id="@+id/infos_section_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/infos_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bio_text" />
+
+        <View
+            android:id="@+id/infos_section_divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="@+id/infos_section_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/infos_section_text"
+            app:layout_constraintTop_toTopOf="@+id/infos_section_text"
+            app:layout_constraintVertical_bias="0.434" />
+
+        <TextView
+            android:id="@+id/phone_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/none_text"
+            app:layout_constraintBottom_toBottomOf="@+id/phone_image"
+            app:layout_constraintStart_toEndOf="@+id/phone_image"
+            app:layout_constraintTop_toTopOf="@+id/phone_image"
+            playerPhoneFormatted="@{viewModel.playerObject}"/>
+
+        <TextView
+            android:id="@+id/mail_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@{viewModel.playerObject.mailAddress}"
+            app:layout_constraintBottom_toBottomOf="@+id/mail_image"
+            app:layout_constraintStart_toEndOf="@+id/mail_image"
+            app:layout_constraintTop_toTopOf="@+id/mail_image"
+            tools:text="@string/mail_tool" />
+
+        <ImageView
+            android:id="@+id/mail_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/ic_email_grey_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/infos_section_text" />
+
+        <ImageView
+            android:id="@+id/phone_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/ic_phone_grey_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mail_image" />
+
+        <TextView
+            android:id="@+id/settings_section_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/settings_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_privacy" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="@+id/settings_section_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/settings_section_text"
+            app:layout_constraintTop_toTopOf="@+id/settings_section_text" />
+
+        <ImageView
+            android:id="@+id/language_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/ic_language_grey_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settings_section_text" />
+
+        <TextView
+            android:id="@+id/language_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/language_text"
+            app:layout_constraintBottom_toBottomOf="@+id/language_image"
+            app:layout_constraintStart_toEndOf="@+id/language_image"
+            app:layout_constraintTop_toTopOf="@+id/language_image"
+            tools:text="@string/language_text" />
+
+        <ImageView
+            android:id="@+id/notification_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:srcCompat="@drawable/ic_notifications_grey_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/language_image" />
+
+        <TextView
+            android:id="@+id/notification_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/notification_text"
+            app:layout_constraintBottom_toBottomOf="@+id/notification_image"
+            app:layout_constraintStart_toEndOf="@+id/notification_image"
+            app:layout_constraintTop_toTopOf="@+id/notification_image"
+            tools:text="@string/notification_text" />
+
+        <TextView
+            android:id="@+id/text_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/image_privacy"
+            app:layout_constraintStart_toEndOf="@+id/image_privacy"
+            app:layout_constraintTop_toTopOf="@+id/image_privacy"
+            tools:text="@tools:sample/lorem"
+            playerPrivacyFormatted="@{viewModel.playerObject}"/>
+
+        <ImageView
+            android:id="@+id/image_privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone_image"
+            tools:srcCompat="@drawable/ic_lock_open_grey_24dp"
+            playerPrivacyIconFormatted="@{viewModel.playerObject}"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

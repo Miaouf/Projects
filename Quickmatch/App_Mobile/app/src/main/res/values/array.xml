@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="options_player_array_admin">
+        <item>Voir le profil</item>
+        <item>Promouvoir</item>
+        <item>Exclure</item>
+    </string-array>
+    <string-array name="options_player_array_member">
+        <item>Voir le profil</item>
+    </string-array>
+</resources>

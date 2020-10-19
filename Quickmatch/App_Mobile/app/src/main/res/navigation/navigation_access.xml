@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_access"
+    app:startDestination="@+id/titleFragment">
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="com.example.quickmatch.access.title.TitleFragmentUI"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_loginFragmentUI"
+            app:destination="@id/loginFragmentUI"
+            app:popUpTo="@+id/titleFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_titleFragment_to_signinFragmentUI"
+            app:destination="@id/signinFragmentUI"
+            app:popUpTo="@+id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.quickmatch.content.setting.SettingFragmentUI"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/loginFragmentUI"
+        android:name="com.example.quickmatch.access.login.LoginFragmentUI"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragmentUI_to_signinFragmentUI"
+            app:destination="@id/signinFragmentUI"
+            app:popUpTo="@+id/titleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signinFragmentUI"
+        android:name="com.example.quickmatch.access.signin.SigninFragmentUI"
+        android:label="fragment_signin"
+        tools:layout="@layout/fragment_signin" >
+        <action
+            android:id="@+id/action_signinFragmentUI_to_loginFragmentUI"
+            app:destination="@id/loginFragmentUI"
+            app:popUpTo="@+id/titleFragment" />
+    </fragment>
+</navigation>

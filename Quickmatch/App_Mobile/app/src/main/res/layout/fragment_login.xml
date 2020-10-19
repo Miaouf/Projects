@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.quickmatch.access.login.LoginFragmentViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".access.login.LoginFragmentUI">
+
+        <TextView
+            android:id="@+id/text_login_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="@string/text_desc_login"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/input_login_mail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/hint_mail"
+            android:inputType="textEmailAddress"
+            android:shadowColor="@android:color/background_light"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorHighlight="@android:color/background_light"
+            android:textColorHint="@color/grey"
+            android:textColorLink="@android:color/background_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_login_status" />
+
+        <EditText
+            android:id="@+id/input_login_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorHighlight="@android:color/background_light"
+            android:textColorHint="@color/grey"
+            android:textColorLink="@android:color/background_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_login_mail" />
+
+        <Button
+            android:id="@+id/button_login_login"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/button_width_constraint"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/button_width_constraint"
+            android:text="@string/text_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_login_password" />
+
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/button_login_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/button_width_constraint"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/button_width_constraint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_goole_signin"/>
+
+        <Button
+            android:id="@+id/button_login_signin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/button_width_constraint"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/button_width_constraint"
+            android:text="@string/text_signin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider_google_signin" />
+
+        <View
+            android:id="@+id/divider_goole_signin"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/divider_width_constraint"
+            android:layout_marginTop="@dimen/divider_top_constraint"
+            android:layout_marginEnd="@dimen/divider_width_constraint"
+            android:background="@color/colorAccent"
+            android:foreground="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_login_login" />
+
+        <TextView
+            android:id="@+id/text_login_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_login_title"
+            tools:text="@string/text_login_status" />
+
+        <View
+            android:id="@+id/divider_google_signin"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/divider_width_constraint"
+            android:layout_marginTop="@dimen/divider_top_constraint"
+            android:layout_marginEnd="@dimen/divider_width_constraint"
+            android:background="@color/colorAccent"
+            android:foreground="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_login_google" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

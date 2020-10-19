@@ -1,0 +1,8 @@
+.vscode/
+target
+.classpath
+.class
+.project
+.settings/
+fakeclient
+fileshare/*.class

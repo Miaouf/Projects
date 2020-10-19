@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.quickmatch.content.match.MatchCreationFragmentViewModel" />
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".content.match.MatchCreationFragmentUI">
+
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:completionThreshold="1"
+                android:hint="@string/club_name"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edit_start_hour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ems="10"
+                android:hint="@string/start_hour_text"
+                android:inputType="time"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_end_hour"
+                app:layout_constraintEnd_toStartOf="@+id/edit_end_hour"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edit_end_hour" />
+
+            <EditText
+                android:id="@+id/edit_end_hour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="@string/end_hour_text"
+                android:inputType="time"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/edit_start_hour"
+                app:layout_constraintTop_toBottomOf="@+id/edit_date" />
+
+            <EditText
+                android:id="@+id/edit_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:ems="10"
+                android:hint="@string/location_text"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_end_hour" />
+
+            <NumberPicker
+                android:id="@+id/picker_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/text_max"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_min"
+                app:layout_constraintTop_toBottomOf="@+id/text_team_size" />
+
+            <NumberPicker
+                android:id="@+id/picker_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/picker_min"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_max"
+                app:layout_constraintTop_toTopOf="@+id/picker_min"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/text_team_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/number_players_text"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_location" />
+
+            <TextView
+                android:id="@+id/text_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/min_text"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/picker_min"
+                app:layout_constraintEnd_toStartOf="@+id/picker_min"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/picker_min" />
+
+            <TextView
+                android:id="@+id/text_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/max_text"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/picker_max"
+                app:layout_constraintEnd_toStartOf="@+id/picker_max"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/picker_min"
+                app:layout_constraintTop_toTopOf="@+id/picker_max" />
+
+            <CheckBox
+                android:id="@+id/check_monday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/monday_text"
+                app:layout_constraintEnd_toStartOf="@+id/check_tuesday"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_repeat_day" />
+
+            <CheckBox
+                android:id="@+id/check_tuesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tuesday_text"
+                app:layout_constraintBottom_toBottomOf="@+id/check_monday"
+                app:layout_constraintEnd_toStartOf="@+id/check_wednesday"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/check_monday"
+                app:layout_constraintTop_toTopOf="@+id/check_monday"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <CheckBox
+                android:id="@+id/check_thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thursday_text"
+                app:layout_constraintBottom_toBottomOf="@+id/check_wednesday"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/check_wednesday"
+                app:layout_constraintTop_toTopOf="@+id/check_wednesday" />
+
+            <CheckBox
+                android:id="@+id/check_friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/friday_text"
+                app:layout_constraintEnd_toStartOf="@+id/check_saturday"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/check_saturday" />
+
+            <CheckBox
+                android:id="@+id/check_saturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/saturday_text"
+                app:layout_constraintEnd_toStartOf="@+id/check_sunday"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/check_friday"
+                app:layout_constraintTop_toBottomOf="@+id/check_wednesday" />
+
+            <CheckBox
+                android:id="@+id/check_sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sunday_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/check_saturday"
+                app:layout_constraintTop_toTopOf="@+id/check_saturday" />
+
+            <CheckBox
+                android:id="@+id/check_wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wednesday_text"
+                app:layout_constraintBottom_toBottomOf="@+id/check_tuesday"
+                app:layout_constraintEnd_toStartOf="@+id/check_thursday"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/check_tuesday"
+                app:layout_constraintTop_toTopOf="@+id/check_tuesday" />
+
+            <TextView
+                android:id="@+id/text_repeat_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/repeat_day_text"
+                android:textAlignment="center"
+                android:textColor="@color/colorAccent"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/picker_min" />
+
+            <Button
+                android:id="@+id/button_create_match"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/create_match_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/picker_repetitions" />
+
+            <EditText
+                android:id="@+id/edit_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:hint="@string/date_match_text"
+                android:inputType="date"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/auto_complete_input" />
+
+            <TextView
+                android:id="@+id/text_number_of_repetitions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/number_of_repetitions_text"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/picker_repetitions"
+                app:layout_constraintEnd_toStartOf="@+id/picker_repetitions"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/picker_repetitions" />
+
+            <NumberPicker
+                android:id="@+id/picker_repetitions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/text_number_of_repetitions"
+                app:layout_constraintTop_toBottomOf="@+id/check_sunday" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

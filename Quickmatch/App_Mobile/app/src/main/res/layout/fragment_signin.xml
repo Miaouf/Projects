@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.quickmatch.access.signin.SigninFragmentViewModel" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".access.signin.SigninFragmentUI">
+
+        <TextView
+            android:id="@+id/text_signin_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/text_desc_signin"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/input_signin_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/hint_name"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@+id/input_signin_firstname"
+            app:layout_constraintEnd_toStartOf="@+id/status_image_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_signin_status" />
+
+        <EditText
+            android:id="@+id/input_signin_firstname"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/hint_firstname"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@+id/input_signin_pseudo"
+            app:layout_constraintEnd_toStartOf="@+id/status_image_first_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_signin_name" />
+
+        <EditText
+            android:id="@+id/input_signin_pseudo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/hint_pseudo"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@+id/input_signin_mail"
+            app:layout_constraintEnd_toStartOf="@+id/status_image_pseudo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_signin_firstname" />
+
+        <EditText
+            android:id="@+id/input_signin_pwd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@+id/input_signin_confirm_pwd"
+            app:layout_constraintEnd_toStartOf="@+id/status_image_password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_signin_mail" />
+
+        <EditText
+            android:id="@+id/input_signin_confirm_pwd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/hint_confirm_password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@+id/input_signin_phone"
+            app:layout_constraintEnd_toStartOf="@+id/status_image_password2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_signin_pwd" />
+
+        <EditText
+            android:id="@+id/input_signin_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/hint_phone_number"
+            android:inputType="phone"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@+id/text_mandatory_fields"
+            app:layout_constraintEnd_toStartOf="@id/status_image_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_signin_confirm_pwd" />
+
+        <EditText
+            android:id="@+id/input_signin_mail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/hint_mail"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/grey"
+            app:layout_constraintBottom_toTopOf="@+id/input_signin_pwd"
+            app:layout_constraintEnd_toStartOf="@+id/status_image_mail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_signin_pseudo" />
+
+        <Button
+            android:id="@+id/button_signin_signin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:enabled="false"
+            android:text="@string/text_signin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_signin_check"
+            app:layout_constraintTop_toBottomOf="@+id/text_mandatory_fields" />
+
+        <Button
+            android:id="@+id/button_signin_check"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/text_check"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_mandatory_fields" />
+
+        <View
+            android:id="@+id/divider_signin_google"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/divider_width_constraint"
+            android:layout_marginTop="@dimen/divider_top_constraint"
+            android:layout_marginEnd="@dimen/divider_width_constraint"
+            android:background="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_signin_check" />
+
+        <Button
+            android:id="@+id/button_signin_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/text_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider_signin_google" />
+
+        <TextView
+            android:id="@+id/text_signin_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_signin_title"
+            tools:text="@string/text_signin_status" />
+
+        <TextView
+            android:id="@+id/text_mandatory_fields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:text="@string/text_mandatory"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_signin_phone" />
+
+        <ImageView
+            android:id="@+id/status_image_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:inputBasicFormat="@{viewModel.mailFormat}"
+            app:layout_constraintBottom_toBottomOf="@+id/input_signin_mail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/input_signin_mail"
+            app:signinCheckStatus="@{viewModel.mailStatus}"
+            app:srcCompat="@drawable/ic_sync_orange_24dp" />
+
+        <ImageView
+            android:id="@+id/status_image_pseudo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:inputBasicFormat="@{viewModel.pseudoFormat}"
+            app:layout_constraintBottom_toBottomOf="@+id/input_signin_pseudo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/input_signin_pseudo"
+            app:signinCheckStatus="@{viewModel.pseudoStatus}"
+            app:srcCompat="@drawable/ic_sync_orange_24dp" />
+
+        <ImageView
+            android:id="@+id/status_image_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:inputBasicFormat="@{viewModel.nameFormat}"
+            app:layout_constraintBottom_toBottomOf="@+id/input_signin_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/input_signin_name"
+            app:srcCompat="@drawable/ic_sync_orange_24dp" />
+
+        <ImageView
+            android:id="@+id/status_image_first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:inputBasicFormat="@{viewModel.firstNameFormat}"
+            app:layout_constraintBottom_toBottomOf="@+id/input_signin_firstname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/input_signin_firstname"
+            app:srcCompat="@drawable/ic_sync_orange_24dp" />
+
+        <ImageView
+            android:id="@+id/status_image_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:inputBasicFormat="@{viewModel.passwordFormat}"
+            app:layout_constraintBottom_toBottomOf="@+id/input_signin_pwd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/input_signin_pwd"
+            app:srcCompat="@drawable/ic_sync_orange_24dp" />
+
+        <ImageView
+            android:id="@+id/status_image_password2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:inputBasicFormat="@{viewModel.passwordCheckFormat}"
+            app:layout_constraintBottom_toBottomOf="@+id/input_signin_confirm_pwd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/input_signin_confirm_pwd"
+            app:srcCompat="@drawable/ic_sync_orange_24dp" />
+
+        <ImageView
+            android:id="@+id/status_image_phone"
+            signinCheckStatus="@{viewModel.phoneNumberStatus}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:inputBasicFormat="@{viewModel.phoneNumberFormat}"
+            app:layout_constraintBottom_toBottomOf="@+id/input_signin_phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/input_signin_phone"
+            app:srcCompat="@drawable/ic_sync_orange_24dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
