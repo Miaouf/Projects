@@ -1,5 +1,6 @@
 #!/bin/bash
 # Bruteforce for HTTP Basic authentification using curl and a password list
+# Default user set as "admin"
 
 if [ "${#@}" != "3" ]; then
   echo "<command> <host> <path> <password_list>"
@@ -9,6 +10,7 @@ fi
 ip=$1
 path=$2
 pass_file=$3
+
 
 SECONDS=0
 
