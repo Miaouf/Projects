@@ -1,4 +1,4 @@
-# Projet de Réseau - RE203 - groupe de 5 personnes
+# Projet de Réseau - RE203 - groupe de 5 personnes - 2020
 Application d’échange de Fichiers en Pair à Pair
 
 Ce projet comporte deux parties : le tracker et le peer, chacun dans le dossier respectif dans "src".
