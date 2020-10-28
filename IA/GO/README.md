@@ -1,7 +1,8 @@
-Projet de GO réalisé par Tanguy PEMEJA et Maxime ROSAY
+ # Projet de GO réalisé par Tanguy PEMEJA et Maxime ROSAY en 2020
 --------------------------------------------------------------------------------
 
 =============================== Heuristique ====================================
+
 Réseau de neurones qui évalue, suivant le plateau, le pourcentage de victoire du
 joueur noir (cf TP).
 L'avantage d'une telle heuristique est que nous n'avons pas à connaître les
@@ -12,6 +13,7 @@ De plus, nous utilisons les 8 symétries du plateau afin d'améliorer notre
 prédiction.
 
 =================================== Joueur =====================================
+
 Composition:
   - myPlayer.py
   - myplayer_model.h5
