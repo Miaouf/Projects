@@ -1,9 +1,9 @@
-# Projet de Réseau - RE203
+# Projet de Réseau - RE203 - groupe de 5 personnes
 Application d’échange de Fichiers en Pair à Pair
 
 Ce projet comporte deux parties : le tracker et le peer, chacun dans le dossier respectif dans "src".
 
-## Tracker
+## Tracker réalisé avec Tanguy PEMEJA
 
 Pour compiler le tracker Il suffit d'exécuter `make` Dans le dossier tracker.
 
@@ -16,7 +16,7 @@ Où:
 -p renseigne la porte où le tracker execute
 
 
-## Peer
+## Peer réalisé par les 3 autres membres du groupe
 
 Pour compiler le tracker Il suffit d'exécuter `make` Dans le dossier peer.
 
