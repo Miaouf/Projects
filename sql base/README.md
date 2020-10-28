@@ -1,4 +1,6 @@
-================= Déploiement ==================================================
+# Projet base de données / application web réalisé avec Tanguy PEMEJA et Théo MATRICON en 2019
+
+### Déploiement
 
   1) Configuration MySQL
 
@@ -33,7 +35,7 @@
 
   Pour lancer le frontend une fois dans le dossier 'frontend' vous pouvez lancer 'npm run serve'.
 
-================= Gestion de la base de données ================================
+### Gestion de la base de données 
 
   Nous avons scindés la gestion de la base de données en plusieurs scripts :
     - suppression.sql :
