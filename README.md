@@ -2,7 +2,7 @@
 
 Ici je référence tous mes projets personnels et académiques dans des dossiers triés par nature de projet.
 
-Notez qu'un rapport pour la plupart des projets se trouve à chaque racine de dossier.
+Notez qu'un rapport (au format PDF) pour la plupart des projets se trouve à chaque racine de dossier.
 
 Si vous avez des questions n'hésitez pas à me contacter sur: `maxime.rosay.pro@gmail.com`.
 
