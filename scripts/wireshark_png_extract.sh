@@ -1,5 +1,5 @@
-#  Given a TCP capture, this script allows you to get images from it
-# run it like ./wireshark_png_extract.sh [capture file]
+# Given a TCP capture, this script allows you to get images from it
+# Run it like ./wireshark_png_extract.sh [capture file]
 # Thanks to Abdelouahab Laaroussi for his contribution
 
 
